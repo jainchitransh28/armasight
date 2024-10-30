@@ -24,7 +24,7 @@ category:
             <h1 class="page-heading">{{category.name}}</h1>
         {{/unless}}
         {{{region name="category_below_header"}}}
-        {{{category.description}}}
+        <!--<div class="cat-desc-top " >{{{category.description}}}</div>-->
         {{#if theme_settings.show_subcategories}}
             {{#if category.subcategories}}
                 <div class="sidebarBlock page-content-subcategories">
@@ -75,10 +75,14 @@ category:
                     <p>{{lang 'categories.no_products'}}</p>
                 {{/if}}
                 {{{region name="category_below_content"}}}
+               
             </main>
+             <div class="cat-desc-bottom">{{{category.description}}}</div>
+            
         </div>
     </div>
 </div>
+
 
 {{/partial}}
 {{> layout/base}}
